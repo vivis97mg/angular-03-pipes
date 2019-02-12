@@ -1,0 +1,384 @@
+<section>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <h1 class="text-white">
+      {{ title | uppercase }}
+    </h1>
+  </nav>
+</section>
+
+<section> 
+  <div class="mt-3 mb-5">
+    <div class="text-center col-xs-10 col-md-10 offset-md-1">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr class="text-uppercase">
+            <th scope="col">
+              variable
+            </th>
+
+            <th scope="col">
+              pipe
+            </th>
+
+            <th scope="col">
+              producto
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              {{ nombre }}
+            </td>
+
+            <td>
+              uppercase
+            </td>
+
+            <td>
+              {{ nombre | uppercase }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ nombre }}
+            </td>
+
+            <td>
+              lowercase
+            </td>
+
+            <td>
+              {{ nombre | lowercase }}
+            </td>
+          </tr>
+
+          <tr>
+          <td>
+            {{ nombre }}
+          </td>
+
+          <td>
+            slice:3
+          </td>
+
+          <td>
+            {{ nombre | slice:3 }}
+          </td>
+
+          <tr>
+            <td>
+              {{ nombre }}
+            </td>
+
+            <td>
+              slice:0:3
+            </td>
+
+            <td>
+              {{ nombre | slice:0:3 }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ arreglo }}
+            </td>
+    
+            <td>
+              slice:1:5
+            </td>
+    
+            <td>
+              {{ arreglo | slice:1:5 }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ pi }}
+            </td>
+    
+            <td>
+              decimal/number
+            </td>
+    
+            <td>
+              {{ pi | number }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ pi }}
+            </td>
+    
+            <td>
+              decimal/number:'3.0-0'
+            </td>
+    
+            <td>
+              {{ pi | number:'3.0-0' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ pi }}
+            </td>
+    
+            <td>
+              decimal/number:'1.0-2'
+            </td>
+    
+            <td>
+              {{ pi | number:'1.0-2' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ pocentaje }}
+            </td>
+    
+            <td>
+              percent
+            </td>
+    
+            <td>
+              {{ pocentaje | percent }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ pocentaje }}
+            </td>
+    
+            <td>
+              percent:'2.2-2'
+            </td>
+    
+            <td>
+              {{ pocentaje | percent:'2.2-2' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ salario }}
+            </td>
+    
+            <td>
+              currency
+            </td>
+    
+            <td>
+              {{ salario | currency }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ salario }}
+            </td>
+    
+            <td>
+              currency:'EUR':false
+            </td>
+    
+            <td>
+              {{ salario | currency:'EUR':false }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ salario }}
+            </td>
+    
+            <td>
+              currency:'EUR':true
+            </td>
+    
+            <td>
+              {{ salario | currency:'EUR':true }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ salario }}
+            </td>
+    
+            <td>
+              currency:'EUR':true:'4.0-0'
+            </td>
+    
+            <td>
+              {{ salario | currency:'EUR':true:'4.0-0' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ salario }}
+            </td>
+    
+            <td>
+              number:'.2-2'
+            </td>
+    
+            <td>
+              {{ salario | number:'.2-2' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{  valorDePromesa }}
+            </td>
+    
+            <td>
+              async
+            </td>
+    
+            <td>
+              {{  valorDePromesa | async }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ fecha }}
+            </td>
+    
+            <td>
+              date
+            </td>
+    
+            <td>
+              {{ fecha | date }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ fecha }}
+            </td>
+    
+            <td>
+              date:'medium'
+            </td>
+    
+            <td>
+              {{ fecha | date:'medium' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ fecha }}
+            </td>
+    
+            <td>
+              date:'MMMM - dd'
+            </td>
+    
+            <td>
+              {{ fecha | date:'MMMM - dd' }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ nombre2 }}
+            </td>
+    
+            <td>
+              capitalizado
+            </td>
+    
+            <td>
+              {{ nombre2 | capitalizado }}
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              {{ nombre2 }}
+            </td>
+    
+            <td>
+              capitalizado solo la primera
+            </td>
+    
+            <td>
+              {{ nombre2 | capitalizado:false }}
+            </td>
+          </tr>
+
+          <tr>
+              <td>
+                {{ nombre }}
+              </td>
+      
+              <td>
+                <span class="mb-1 d-block">
+                  contraseña: {{ activar }}
+                </span>
+                <button class="btn btn-dark" (click)="activar = !activar" type="button">
+                  Activar/Desactivar
+                </button>
+
+              </td>
+      
+              <td>
+                {{ nombre | contrasena:activar }}
+              </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class=" col">
+          <h4 class="bg-dark text-white text-center">
+            slice
+          </h4>
+      
+          <ul>
+            <li *ngFor="let item of arreglo | slice:5:20">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      
+        <div class=" col">
+          <h4 class="bg-dark text-white text-center">
+            json
+          </h4>
+      
+          <pre>
+            {{ heroe | json }}
+          </pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-10 offset-1">
+      <h4 class="bg-dark text-white text-center">
+        you-tube
+      </h4>
+
+      <!-- error -->
+      <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/{{video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- bien -->
+      <iframe width="560" height="315" [src]="video | domseguro:'https://www.youtube.com/embed/' " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+  </div>
+</section>
